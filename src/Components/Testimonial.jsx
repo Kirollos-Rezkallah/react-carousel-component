@@ -7,12 +7,12 @@ function Testimonial() {
   const [select, setSelect] = useState(1);
 
   function handleNext() {
-    if (select === testimonials.length) setSelect(0);
+    if (select === testimonials.length) setSelect(1);
     else setSelect((s) => s + 1);
   }
 
   function handlePrev() {
-    if (select === 0) setSelect(testimonials.length);
+    if (select === 1) setSelect(testimonials.length);
     else setSelect((s) => s - 1);
   }
 
@@ -21,10 +21,12 @@ function Testimonial() {
   }
   return (
     <div className="carousel">
-      <img
-        src={testimonials[select - 1].img}
-        alt={`${testimonials[select - 1].author} picture`}
-      />
+      <div className="imgFrame">
+        <img
+          src={testimonials[select - 1].img}
+          alt={`${testimonials[select - 1].author} picture`}
+        />
+      </div>
       <blockquote className="testimonial">
         <p className="testimonial-text">{testimonials[select - 1].text}</p>
         <p className="testimonial-author">{testimonials[select - 1].author}</p>
