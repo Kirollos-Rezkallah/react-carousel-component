@@ -48,6 +48,7 @@ body {
 
 .carousel img {
   height: 20rem;
+  width: 20rem;
   border-radius: 0.8rem;
   transform: scale(1.5);
 
